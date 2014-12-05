@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5E324E251A31CA2100E7C0F7 /* CRRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E324E241A31CA2100E7C0F7 /* CRRLoginViewController.m */; };
 		5E324E281A31CA8600E7C0F7 /* CRRLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E324E271A31CA8600E7C0F7 /* CRRLoginView.m */; };
+		5EE294D71A31E849009441E1 /* CRRHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294D61A31E849009441E1 /* CRRHTTPRequestOperationManager.m */; };
+		5EE294DA1A3200D7009441E1 /* CRRAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294D91A3200D7009441E1 /* CRRAPIManager.m */; };
 		907A75551A2A3A4700A58967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A75541A2A3A4700A58967 /* main.m */; };
 		907A75581A2A3A4700A58967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A75571A2A3A4700A58967 /* AppDelegate.m */; };
 		907A755B1A2A3A4700A58967 /* CRRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A755A1A2A3A4700A58967 /* CRRViewController.m */; };
@@ -35,6 +37,12 @@
 		5E324E241A31CA2100E7C0F7 /* CRRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRLoginViewController.m; sourceTree = "<group>"; };
 		5E324E261A31CA8600E7C0F7 /* CRRLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRLoginView.h; sourceTree = "<group>"; };
 		5E324E271A31CA8600E7C0F7 /* CRRLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRLoginView.m; sourceTree = "<group>"; };
+		5EE294D51A31E849009441E1 /* CRRHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		5EE294D61A31E849009441E1 /* CRRHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		5EE294D81A3200D7009441E1 /* CRRAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRAPIManager.h; sourceTree = "<group>"; };
+		5EE294D91A3200D7009441E1 /* CRRAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRAPIManager.m; sourceTree = "<group>"; };
+		5EE294DB1A32022E009441E1 /* Typedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Typedefs.h; sourceTree = "<group>"; };
+		5EE294DF1A320539009441E1 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		907A754F1A2A3A4700A58967 /* Callroom QR Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Callroom QR Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		907A75531A2A3A4700A58967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		907A75541A2A3A4700A58967 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +111,8 @@
 		907A75511A2A3A4700A58967 /* Callroom QR Reader */ = {
 			isa = PBXGroup;
 			children = (
+				5EE294DB1A32022E009441E1 /* Typedefs.h */,
+				5EE294DF1A320539009441E1 /* Defines.h */,
 				907A75561A2A3A4700A58967 /* AppDelegate.h */,
 				907A75571A2A3A4700A58967 /* AppDelegate.m */,
 				907A75591A2A3A4700A58967 /* CRRViewController.h */,
@@ -111,6 +121,10 @@
 				5E324E241A31CA2100E7C0F7 /* CRRLoginViewController.m */,
 				5E324E261A31CA8600E7C0F7 /* CRRLoginView.h */,
 				5E324E271A31CA8600E7C0F7 /* CRRLoginView.m */,
+				5EE294D51A31E849009441E1 /* CRRHTTPRequestOperationManager.h */,
+				5EE294D61A31E849009441E1 /* CRRHTTPRequestOperationManager.m */,
+				5EE294D81A3200D7009441E1 /* CRRAPIManager.h */,
+				5EE294D91A3200D7009441E1 /* CRRAPIManager.m */,
 				907A755C1A2A3A4700A58967 /* Main.storyboard */,
 				907A755F1A2A3A4700A58967 /* Images.xcassets */,
 				907A75611A2A3A4700A58967 /* LaunchScreen.xib */,
@@ -288,9 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE294D71A31E849009441E1 /* CRRHTTPRequestOperationManager.m in Sources */,
 				5E324E251A31CA2100E7C0F7 /* CRRLoginViewController.m in Sources */,
 				907A755B1A2A3A4700A58967 /* CRRViewController.m in Sources */,
 				907A75581A2A3A4700A58967 /* AppDelegate.m in Sources */,
+				5EE294DA1A3200D7009441E1 /* CRRAPIManager.m in Sources */,
 				5E324E281A31CA8600E7C0F7 /* CRRLoginView.m in Sources */,
 				907A75551A2A3A4700A58967 /* main.m in Sources */,
 			);

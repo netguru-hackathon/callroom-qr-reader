@@ -6,5 +6,6 @@ target 'Callroom QR Reader' do
   pod 'SDWebImage'
   pod 'QRCodeReaderViewController', '~> 2.0.0'
   pod 'googleplus-ios-sdk'
+  pod 'AFNetworking'
 end
 

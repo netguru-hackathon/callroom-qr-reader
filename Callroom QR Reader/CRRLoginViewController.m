@@ -9,12 +9,14 @@
 #import "CRRLoginViewController.h"
 #import "CRRLoginView.h"
 #import <GooglePlus/GooglePlus.h>
-
-static NSString * const kClientId = @"481541711545-31kbrp5pknl0p4ggiof53ocibmg01vmj.apps.googleusercontent.com";
+#import <GoogleOpenSource/GoogleOpenSource.h>
+#import "Defines.h"
+#import "CRRAPIManager.h"
 
 @interface CRRLoginViewController () <GPPSignInDelegate>
 
 @property (nonatomic, weak) CRRLoginView *aView;
+@property (nonatomic, strong) GTMOAuth2Authentication *auth;
 
 @end
 
@@ -37,20 +39,25 @@ static NSString * const kClientId = @"481541711545-31kbrp5pknl0p4ggiof53ocibmg01
     signIn.shouldFetchGoogleUserEmail = YES;
     
     signIn.clientID = kClientId;
-    signIn.scopes = @[@"profile"];
-//    signIn.scopes = @[@"https://www.googleapis.com/auth/calendar", @"https://www.googleapis.com/auth/plus.login"];
+    signIn.scopes = @[@"https://www.googleapis.com/auth/calendar", @"https://www.googleapis.com/auth/plus.login"];
     
     signIn.delegate = self;
 }
 
 - (void)finishedWithAuth:(GTMOAuth2Authentication *)auth error:(NSError *)error {
+
+    [CRRAPIManager setupAPIWithToken:auth];
+    [CRRAPIManager calendarListWithSuccess:^(NSArray *array) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
 }
 
 #pragma mark UIControl Methods
 - (void)signInButtonDidClick:(GPPSignInButton *)button {
-    
-    [[GPPSignIn sharedInstance] authenticate];
+
 }
 
 @end
