@@ -12,8 +12,13 @@
 #import <GoogleOpenSource/GoogleOpenSource.h>
 
 #import "CRRCalendar.h"
+#import "CRREvent.h"
 
 @implementation CRRAPIManager
+
+static inline NSString * key() {
+    return [NSString stringWithFormat:@"key=%@", kClientId];
+}
 
 + (void)setupAPIWithToken:(GTMOAuth2Authentication *)token {
 
@@ -23,13 +28,29 @@
 
 + (void)calendarListWithSuccess:(CRRArrayBlock)success failure:(CRRErrorBlock)failure {
     
-    NSString *query = [NSString stringWithFormat:@"key=%@", kClientId];
-    
-    [CRRNetworkManager requestWithGET:query path:@"users/me/calendarList" success:^(id object) {
-        MTL
+    [CRRNetworkManager requestWithGET:key() path:@"users/me/calendarList" success:^(NSDictionary *response) {
+
+        NSArray *items = [MTLJSONAdapter modelsOfClass:[CRRCalendar class] fromJSONArray:response[@"items"] error:NULL];
+        success(items);
+        
     } failure:^(NSError *error) {
         failure(error);
     }];
 }
+
++ (void)calendarEventsWithCalendar:(CRRCalendar *)calendar success:(CRRArrayBlock)success failure:(CRRErrorBlock)failure {
+    
+    NSString *path = [NSString stringWithFormat:@"calendars/%@/events", calendar.identifier];
+    
+    [CRRNetworkManager requestWithGET:key() path:path success:^(NSDictionary *response) {
+        
+        NSArray *array = [MTLJSONAdapter modelsOfClass:[CRREvent class] fromJSONArray:response[@"items"] error:NULL];
+        success(array);
+        
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
 
 @end

@@ -24,7 +24,7 @@
     CRRLoginViewController *loginViewController = [[CRRLoginViewController alloc] init];
     CRRCalendarSelectorViewController *selectorViewController = [[CRRCalendarSelectorViewController alloc] initWithModel:@[]];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:selectorViewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     self.window.rootViewController = navigationController;
     
     return YES;

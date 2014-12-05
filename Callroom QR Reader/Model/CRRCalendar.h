@@ -11,4 +11,12 @@
 
 @interface CRRCalendar : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic, strong) NSString *accessRole;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *etag;
+@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic, strong) NSString *kind;
+@property (nonatomic, strong) NSString *summary;
+@property (nonatomic, strong) NSString *timezone;
+
 @end

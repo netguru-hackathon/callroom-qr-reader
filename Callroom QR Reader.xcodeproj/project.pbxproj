@@ -14,6 +14,12 @@
 		5EE294E81A32094D009441E1 /* CRRCalendarSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294E71A32094D009441E1 /* CRRCalendarSelectorViewController.m */; };
 		5EE294EC1A320966009441E1 /* CRRCalendarSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294EB1A320966009441E1 /* CRRCalendarSelectorView.m */; };
 		5EE294F01A320F22009441E1 /* CRRCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294EF1A320F22009441E1 /* CRRCalendar.m */; };
+		5EE294F41A321104009441E1 /* CRREventsPresenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294F31A321104009441E1 /* CRREventsPresenterViewController.m */; };
+		5EE294F81A32112B009441E1 /* CRREventsPresenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294F71A32112B009441E1 /* CRREventsPresenterView.m */; };
+		5EE294FC1A32127F009441E1 /* CRREventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294FB1A32127F009441E1 /* CRREventCell.m */; };
+		5EE294FF1A3213DF009441E1 /* CRRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294FE1A3213DF009441E1 /* CRRBaseView.m */; };
+		5EE295021A321BA6009441E1 /* CRREvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE295011A321BA6009441E1 /* CRREvent.m */; };
+		5EE295051A321C30009441E1 /* CRREventCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE295041A321C30009441E1 /* CRREventCreator.m */; };
 		907A75551A2A3A4700A58967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A75541A2A3A4700A58967 /* main.m */; };
 		907A75581A2A3A4700A58967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A75571A2A3A4700A58967 /* AppDelegate.m */; };
 		907A755B1A2A3A4700A58967 /* CRRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A755A1A2A3A4700A58967 /* CRRViewController.m */; };
@@ -52,6 +58,18 @@
 		5EE294EB1A320966009441E1 /* CRRCalendarSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRCalendarSelectorView.m; sourceTree = "<group>"; };
 		5EE294EE1A320F22009441E1 /* CRRCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRRCalendar.h; path = Model/CRRCalendar.h; sourceTree = "<group>"; };
 		5EE294EF1A320F22009441E1 /* CRRCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRRCalendar.m; path = Model/CRRCalendar.m; sourceTree = "<group>"; };
+		5EE294F21A321104009441E1 /* CRREventsPresenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRREventsPresenterViewController.h; sourceTree = "<group>"; };
+		5EE294F31A321104009441E1 /* CRREventsPresenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRREventsPresenterViewController.m; sourceTree = "<group>"; };
+		5EE294F61A32112B009441E1 /* CRREventsPresenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRREventsPresenterView.h; sourceTree = "<group>"; };
+		5EE294F71A32112B009441E1 /* CRREventsPresenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRREventsPresenterView.m; sourceTree = "<group>"; };
+		5EE294FA1A32127F009441E1 /* CRREventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRREventCell.h; sourceTree = "<group>"; };
+		5EE294FB1A32127F009441E1 /* CRREventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRREventCell.m; sourceTree = "<group>"; };
+		5EE294FD1A3213DF009441E1 /* CRRBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRBaseView.h; sourceTree = "<group>"; };
+		5EE294FE1A3213DF009441E1 /* CRRBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRBaseView.m; sourceTree = "<group>"; };
+		5EE295001A321BA6009441E1 /* CRREvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRREvent.h; path = Model/CRREvent.h; sourceTree = "<group>"; };
+		5EE295011A321BA6009441E1 /* CRREvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRREvent.m; path = Model/CRREvent.m; sourceTree = "<group>"; };
+		5EE295031A321C30009441E1 /* CRREventCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRREventCreator.h; path = Model/CRREventCreator.h; sourceTree = "<group>"; };
+		5EE295041A321C30009441E1 /* CRREventCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRREventCreator.m; path = Model/CRREventCreator.m; sourceTree = "<group>"; };
 		907A754F1A2A3A4700A58967 /* Callroom QR Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Callroom QR Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		907A75531A2A3A4700A58967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		907A75541A2A3A4700A58967 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +132,7 @@
 				5EE294E41A32084B009441E1 /* Temp */,
 				5EE294E21A32083B009441E1 /* Login */,
 				5EE294E91A320953009441E1 /* Calendar Selector */,
+				5EE294F51A321107009441E1 /* Events Presenter */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -180,8 +199,33 @@
 			children = (
 				5EE294EE1A320F22009441E1 /* CRRCalendar.h */,
 				5EE294EF1A320F22009441E1 /* CRRCalendar.m */,
+				5EE295001A321BA6009441E1 /* CRREvent.h */,
+				5EE295011A321BA6009441E1 /* CRREvent.m */,
+				5EE295031A321C30009441E1 /* CRREventCreator.h */,
+				5EE295041A321C30009441E1 /* CRREventCreator.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		5EE294F51A321107009441E1 /* Events Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5EE294F21A321104009441E1 /* CRREventsPresenterViewController.h */,
+				5EE294F31A321104009441E1 /* CRREventsPresenterViewController.m */,
+				5EE294F91A321132009441E1 /* View */,
+			);
+			name = "Events Presenter";
+			sourceTree = "<group>";
+		};
+		5EE294F91A321132009441E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EE294F61A32112B009441E1 /* CRREventsPresenterView.h */,
+				5EE294F71A32112B009441E1 /* CRREventsPresenterView.m */,
+				5EE294FA1A32127F009441E1 /* CRREventCell.h */,
+				5EE294FB1A32127F009441E1 /* CRREventCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		907A75461A2A3A4700A58967 = {
@@ -211,6 +255,8 @@
 				5EE294DF1A320539009441E1 /* Defines.h */,
 				907A75561A2A3A4700A58967 /* AppDelegate.h */,
 				907A75571A2A3A4700A58967 /* AppDelegate.m */,
+				5EE294FD1A3213DF009441E1 /* CRRBaseView.h */,
+				5EE294FE1A3213DF009441E1 /* CRRBaseView.m */,
 				5EE294E11A320834009441E1 /* Controllers */,
 				5EE294E01A320827009441E1 /* Networking */,
 				5EE294F11A320F25009441E1 /* Model */,
@@ -390,9 +436,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE294D71A31E849009441E1 /* CRRHTTPRequestOperationManager.m in Sources */,
+				5EE294FC1A32127F009441E1 /* CRREventCell.m in Sources */,
+				5EE294F41A321104009441E1 /* CRREventsPresenterViewController.m in Sources */,
 				5E324E251A31CA2100E7C0F7 /* CRRLoginViewController.m in Sources */,
+				5EE295021A321BA6009441E1 /* CRREvent.m in Sources */,
+				5EE295051A321C30009441E1 /* CRREventCreator.m in Sources */,
 				907A755B1A2A3A4700A58967 /* CRRViewController.m in Sources */,
+				5EE294FF1A3213DF009441E1 /* CRRBaseView.m in Sources */,
 				907A75581A2A3A4700A58967 /* AppDelegate.m in Sources */,
+				5EE294F81A32112B009441E1 /* CRREventsPresenterView.m in Sources */,
 				5EE294DA1A3200D7009441E1 /* CRRAPIManager.m in Sources */,
 				5EE294F01A320F22009441E1 /* CRRCalendar.m in Sources */,
 				5E324E281A31CA8600E7C0F7 /* CRRLoginView.m in Sources */,

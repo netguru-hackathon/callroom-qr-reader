@@ -12,6 +12,7 @@
 #import <GoogleOpenSource/GoogleOpenSource.h>
 #import "Defines.h"
 #import "CRRAPIManager.h"
+#import "CRRCalendarSelectorViewController.h"
 
 @interface CRRLoginViewController () <GPPSignInDelegate>
 
@@ -48,6 +49,9 @@
 
     [CRRAPIManager setupAPIWithToken:auth];
     [CRRAPIManager calendarListWithSuccess:^(NSArray *array) {
+        
+        CRRCalendarSelectorViewController *controller = [[CRRCalendarSelectorViewController alloc] initWithModel:array];
+        [self.navigationController pushViewController:controller animated:YES];
         
     } failure:^(NSError *error) {
         

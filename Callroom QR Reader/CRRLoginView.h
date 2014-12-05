@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Netguru. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CRRBaseView.h"
 @class GPPSignInButton;
 
-@interface CRRLoginView : UIView
+@interface CRRLoginView : CRRBaseView
 
 @property (nonatomic, strong) GPPSignInButton *signInButton;
 

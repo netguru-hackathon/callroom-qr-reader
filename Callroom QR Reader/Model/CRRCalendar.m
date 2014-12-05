@@ -11,7 +11,13 @@
 @implementation CRRCalendar
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{};
+    return @{@"accessRole" : @"accessRole",
+             @"name" : @"description",
+             @"etag" : @"etag",
+             @"identifier" : @"id",
+             @"kind" : @"kind",
+             @"summary" : @"summary",
+             @"timezone" : @"timeZone"};
 }
 
 @end

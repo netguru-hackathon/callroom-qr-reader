@@ -1,5 +1,5 @@
 //
-//  CRRCalendarSelectorView.h
+//  CRRCalendarPresenterView.h
 //  Callroom QR Reader
 //
 //  Created by Patryk Kaczmarek on 05.12.2014.
@@ -8,9 +8,8 @@
 
 #import "CRRBaseView.h"
 
-@interface CRRCalendarSelectorView : CRRBaseView
+@interface CRREventsPresenterView : CRRBaseView
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UIButton *QRButton;
 
 @end

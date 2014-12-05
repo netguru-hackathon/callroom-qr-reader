@@ -10,5 +10,5 @@
 #define Callroom_QR_Reader_Defines_h
 
 #define kClientId @"481541711545-31kbrp5pknl0p4ggiof53ocibmg01vmj.apps.googleusercontent.com"
-
+#define kAPPColor [UIColor blueColor]
 #endif

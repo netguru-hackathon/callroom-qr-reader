@@ -9,6 +9,7 @@
 #import "CRRCalendarSelectorViewController.h"
 #import "QRCodeReaderViewController.h"
 #import "CRRCalendarSelectorView.h"
+#import "CRREventsPresenterViewController.h"
 
 #import "CRRCalendar.h"
 
@@ -47,6 +48,7 @@
 }
 
 #pragma mark UITableViewDelegate
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.model.count;
 }
@@ -57,19 +59,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     CRRCalendar *calendar = self.model[indexPath.row];
+    CRREventsPresenterViewController *controller = [[CRREventsPresenterViewController alloc] initWithCalendar:calendar];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark UITableViewDataSource
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *calendarSelectorCellIdentifier = @"calendarSelectorCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:calendarSelectorCellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:calendarSelectorCellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:calendarSelectorCellIdentifier];
     }
     
     CRRCalendar *calendar = self.model[indexPath.row];
-    
+    cell.textLabel.text = calendar.summary ? : @"";
+    cell.detailTextLabel.text = calendar.name ? : @"";
     return cell;
 }
 
