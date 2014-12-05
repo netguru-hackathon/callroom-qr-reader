@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import  "Typedefs.h"
 
-@class GTMOAuth2Authentication;
+@class GTMOAuth2Authentication, CRRCalendar;
 
 @interface CRRAPIManager : NSObject
 

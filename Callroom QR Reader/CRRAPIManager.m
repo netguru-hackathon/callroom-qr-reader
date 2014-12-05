@@ -11,6 +11,8 @@
 #import "CRRHTTPRequestOperationManager.h"
 #import <GoogleOpenSource/GoogleOpenSource.h>
 
+#import "CRRCalendar.h"
+
 @implementation CRRAPIManager
 
 + (void)setupAPIWithToken:(GTMOAuth2Authentication *)token {
@@ -24,7 +26,7 @@
     NSString *query = [NSString stringWithFormat:@"key=%@", kClientId];
     
     [CRRNetworkManager requestWithGET:query path:@"users/me/calendarList" success:^(id object) {
-        //parse here objects to array and return success()
+        MTL
     } failure:^(NSError *error) {
         failure(error);
     }];

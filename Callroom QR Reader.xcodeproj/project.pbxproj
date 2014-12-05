@@ -11,6 +11,9 @@
 		5E324E281A31CA8600E7C0F7 /* CRRLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E324E271A31CA8600E7C0F7 /* CRRLoginView.m */; };
 		5EE294D71A31E849009441E1 /* CRRHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294D61A31E849009441E1 /* CRRHTTPRequestOperationManager.m */; };
 		5EE294DA1A3200D7009441E1 /* CRRAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294D91A3200D7009441E1 /* CRRAPIManager.m */; };
+		5EE294E81A32094D009441E1 /* CRRCalendarSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294E71A32094D009441E1 /* CRRCalendarSelectorViewController.m */; };
+		5EE294EC1A320966009441E1 /* CRRCalendarSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294EB1A320966009441E1 /* CRRCalendarSelectorView.m */; };
+		5EE294F01A320F22009441E1 /* CRRCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE294EF1A320F22009441E1 /* CRRCalendar.m */; };
 		907A75551A2A3A4700A58967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A75541A2A3A4700A58967 /* main.m */; };
 		907A75581A2A3A4700A58967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A75571A2A3A4700A58967 /* AppDelegate.m */; };
 		907A755B1A2A3A4700A58967 /* CRRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A755A1A2A3A4700A58967 /* CRRViewController.m */; };
@@ -43,6 +46,12 @@
 		5EE294D91A3200D7009441E1 /* CRRAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRAPIManager.m; sourceTree = "<group>"; };
 		5EE294DB1A32022E009441E1 /* Typedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Typedefs.h; sourceTree = "<group>"; };
 		5EE294DF1A320539009441E1 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		5EE294E61A32094D009441E1 /* CRRCalendarSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRCalendarSelectorViewController.h; sourceTree = "<group>"; };
+		5EE294E71A32094D009441E1 /* CRRCalendarSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRCalendarSelectorViewController.m; sourceTree = "<group>"; };
+		5EE294EA1A320966009441E1 /* CRRCalendarSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRCalendarSelectorView.h; sourceTree = "<group>"; };
+		5EE294EB1A320966009441E1 /* CRRCalendarSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRCalendarSelectorView.m; sourceTree = "<group>"; };
+		5EE294EE1A320F22009441E1 /* CRRCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRRCalendar.h; path = Model/CRRCalendar.h; sourceTree = "<group>"; };
+		5EE294EF1A320F22009441E1 /* CRRCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRRCalendar.m; path = Model/CRRCalendar.m; sourceTree = "<group>"; };
 		907A754F1A2A3A4700A58967 /* Callroom QR Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Callroom QR Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		907A75531A2A3A4700A58967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		907A75541A2A3A4700A58967 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +113,7 @@
 			children = (
 				5EE294E41A32084B009441E1 /* Temp */,
 				5EE294E21A32083B009441E1 /* Login */,
+				5EE294E91A320953009441E1 /* Calendar Selector */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -146,6 +156,34 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		5EE294E91A320953009441E1 /* Calendar Selector */ = {
+			isa = PBXGroup;
+			children = (
+				5EE294E61A32094D009441E1 /* CRRCalendarSelectorViewController.h */,
+				5EE294E71A32094D009441E1 /* CRRCalendarSelectorViewController.m */,
+				5EE294ED1A32096A009441E1 /* View */,
+			);
+			name = "Calendar Selector";
+			sourceTree = "<group>";
+		};
+		5EE294ED1A32096A009441E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EE294EA1A320966009441E1 /* CRRCalendarSelectorView.h */,
+				5EE294EB1A320966009441E1 /* CRRCalendarSelectorView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5EE294F11A320F25009441E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EE294EE1A320F22009441E1 /* CRRCalendar.h */,
+				5EE294EF1A320F22009441E1 /* CRRCalendar.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		907A75461A2A3A4700A58967 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +213,7 @@
 				907A75571A2A3A4700A58967 /* AppDelegate.m */,
 				5EE294E11A320834009441E1 /* Controllers */,
 				5EE294E01A320827009441E1 /* Networking */,
+				5EE294F11A320F25009441E1 /* Model */,
 				5EE294E51A320855009441E1 /* Resources */,
 				907A75521A2A3A4700A58967 /* Supporting Files */,
 			);
@@ -355,8 +394,11 @@
 				907A755B1A2A3A4700A58967 /* CRRViewController.m in Sources */,
 				907A75581A2A3A4700A58967 /* AppDelegate.m in Sources */,
 				5EE294DA1A3200D7009441E1 /* CRRAPIManager.m in Sources */,
+				5EE294F01A320F22009441E1 /* CRRCalendar.m in Sources */,
 				5E324E281A31CA8600E7C0F7 /* CRRLoginView.m in Sources */,
+				5EE294EC1A320966009441E1 /* CRRCalendarSelectorView.m in Sources */,
 				907A75551A2A3A4700A58967 /* main.m in Sources */,
+				5EE294E81A32094D009441E1 /* CRRCalendarSelectorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
