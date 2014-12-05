@@ -1,0 +1,23 @@
+PODS:
+  - googleplus-ios-sdk (1.7.1)
+  - Mantle (1.5.1):
+    - Mantle/extobjc (= 1.5.1)
+  - Mantle/extobjc (1.5.1)
+  - QRCodeReaderViewController (2.0.0)
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core (= 3.7.1)
+  - SDWebImage/Core (3.7.1)
+
+DEPENDENCIES:
+  - googleplus-ios-sdk
+  - Mantle
+  - QRCodeReaderViewController (~> 2.0.0)
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  googleplus-ios-sdk: b0f6cd8aa29c51d0048cace8dc3bd8f4ae0806bb
+  Mantle: d7c5ac734579ec751c58fecbf56189853056c58c
+  QRCodeReaderViewController: b6339563c7d373c3b76fc95819f9f604056f7870
+  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+
+COCOAPODS: 0.35.0

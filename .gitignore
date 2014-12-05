@@ -1,31 +1,46 @@
-*.rbc
-capybara-*.html
-.rspec
-/log
-/tmp
-/db/*.sqlite3
-/public/system
-/coverage/
-/spec/tmp
-**.orig
-rerun.txt
-pickle-email-*.html
+#
+#  .gitignore
+#
+#  Copyright (c) 2014 Netguru Sp. z o.o. All rights reserved.
+#
 
-# TODO Comment out these rules if you are OK with secrets being uploaded to the repo
-config/initializers/secret_token.rb
-config/secrets.yml
+# OS X
+.DS_Store
+.localized
 
-## Environment normalisation:
-/.bundle
-/vendor/bundle
+# Xcode user-specific files
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.pbxuser
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
 
-# these should all be checked in to normalise the environment:
-# Gemfile.lock, .ruby-version, .ruby-gemset
+# Xcode user-specific directories
+xcuserdata
+profile
 
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
+# Xcode build directories
+build
+output
+DerivedData
 
-# if using bower-rails ignore default bower_components path bower.json files
-/vendor/assets/bower_components
-*.bowerrc
-bower.json
+# AppCode files
+.idea
+
+# Raw logs
+xcodebuild.log
+xcodebuild_error.log
+
+# CocoaPods files
+Pods
+
+# Carthage files
+Carthage.build
+Carthage.checkout
+
+# Bundler files
+.bundle
+vendor
