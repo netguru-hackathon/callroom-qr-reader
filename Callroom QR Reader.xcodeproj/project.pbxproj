@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E324E251A31CA2100E7C0F7 /* CRRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E324E241A31CA2100E7C0F7 /* CRRLoginViewController.m */; };
+		5E324E281A31CA8600E7C0F7 /* CRRLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E324E271A31CA8600E7C0F7 /* CRRLoginView.m */; };
 		907A75551A2A3A4700A58967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A75541A2A3A4700A58967 /* main.m */; };
 		907A75581A2A3A4700A58967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A75571A2A3A4700A58967 /* AppDelegate.m */; };
-		907A755B1A2A3A4700A58967 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A755A1A2A3A4700A58967 /* ViewController.m */; };
+		907A755B1A2A3A4700A58967 /* CRRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907A755A1A2A3A4700A58967 /* CRRViewController.m */; };
 		907A755E1A2A3A4700A58967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 907A755C1A2A3A4700A58967 /* Main.storyboard */; };
 		907A75601A2A3A4700A58967 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 907A755F1A2A3A4700A58967 /* Images.xcassets */; };
 		907A75631A2A3A4700A58967 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907A75611A2A3A4700A58967 /* LaunchScreen.xib */; };
@@ -29,13 +31,17 @@
 
 /* Begin PBXFileReference section */
 		1B1D5133E547B9C498E76D84 /* libPods-Callroom QR Reader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Callroom QR Reader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E324E231A31CA2100E7C0F7 /* CRRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRLoginViewController.h; sourceTree = "<group>"; };
+		5E324E241A31CA2100E7C0F7 /* CRRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRLoginViewController.m; sourceTree = "<group>"; };
+		5E324E261A31CA8600E7C0F7 /* CRRLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRRLoginView.h; sourceTree = "<group>"; };
+		5E324E271A31CA8600E7C0F7 /* CRRLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRRLoginView.m; sourceTree = "<group>"; };
 		907A754F1A2A3A4700A58967 /* Callroom QR Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Callroom QR Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		907A75531A2A3A4700A58967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		907A75541A2A3A4700A58967 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		907A75561A2A3A4700A58967 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		907A75571A2A3A4700A58967 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		907A75591A2A3A4700A58967 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		907A755A1A2A3A4700A58967 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		907A75591A2A3A4700A58967 /* CRRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRRViewController.h; sourceTree = "<group>"; };
+		907A755A1A2A3A4700A58967 /* CRRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRRViewController.m; sourceTree = "<group>"; };
 		907A755D1A2A3A4700A58967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		907A755F1A2A3A4700A58967 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		907A75621A2A3A4700A58967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -99,8 +105,12 @@
 			children = (
 				907A75561A2A3A4700A58967 /* AppDelegate.h */,
 				907A75571A2A3A4700A58967 /* AppDelegate.m */,
-				907A75591A2A3A4700A58967 /* ViewController.h */,
-				907A755A1A2A3A4700A58967 /* ViewController.m */,
+				907A75591A2A3A4700A58967 /* CRRViewController.h */,
+				907A755A1A2A3A4700A58967 /* CRRViewController.m */,
+				5E324E231A31CA2100E7C0F7 /* CRRLoginViewController.h */,
+				5E324E241A31CA2100E7C0F7 /* CRRLoginViewController.m */,
+				5E324E261A31CA8600E7C0F7 /* CRRLoginView.h */,
+				5E324E271A31CA8600E7C0F7 /* CRRLoginView.m */,
 				907A755C1A2A3A4700A58967 /* Main.storyboard */,
 				907A755F1A2A3A4700A58967 /* Images.xcassets */,
 				907A75611A2A3A4700A58967 /* LaunchScreen.xib */,
@@ -278,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				907A755B1A2A3A4700A58967 /* ViewController.m in Sources */,
+				5E324E251A31CA2100E7C0F7 /* CRRLoginViewController.m in Sources */,
+				907A755B1A2A3A4700A58967 /* CRRViewController.m in Sources */,
 				907A75581A2A3A4700A58967 /* AppDelegate.m in Sources */,
+				5E324E281A31CA8600E7C0F7 /* CRRLoginView.m in Sources */,
 				907A75551A2A3A4700A58967 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

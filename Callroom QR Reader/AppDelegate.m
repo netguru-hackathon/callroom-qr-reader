@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <GooglePlus/GooglePlus.h>
+#import "CRRLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    CRRLoginViewController *loginViewController = [[CRRLoginViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    self.window.rootViewController = navigationController;
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [GPPURLHandler handleURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

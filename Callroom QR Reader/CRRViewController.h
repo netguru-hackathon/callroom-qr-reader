@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <GooglePlus/GooglePlus.h>
 
-@interface ViewController : UIViewController <GPPSignInDelegate>
-
+@interface CRRViewController : UIViewController
 
 @end
 

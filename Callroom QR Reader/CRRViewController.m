@@ -6,32 +6,33 @@
 //  Copyright (c) 2014 Netguru. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CRRViewController.h"
 #import "QRCodeReaderViewController.h"
 #import "GoogleOpenSource/GoogleOpenSource.h"
+#import <GooglePlus/GooglePlus.h>
 
-#define CLIEND_ID @"INSERT YOUR CLIENTID HERE"
+static NSString * const kClientId = @"481541711545-31kbrp5pknl0p4ggiof53ocibmg01vmj.apps.googleusercontent.com";
 
-static NSString * const kClientId = CLIEND_ID;
-
-@interface ViewController ()
+@interface CRRViewController () <GPPSignInDelegate, QRCodeReaderDelegate>
 
 @end
 
-@implementation ViewController
+@implementation CRRViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    GPPSignIn *signIn = [GPPSignIn sharedInstance];
-    signIn.shouldFetchGooglePlusUser = YES;
-    
-    signIn.clientID = kClientId;
-    signIn.scopes = @[ @"profile" ];
-    
-    // Optional: declare signIn.actions, see "app activities"
-    signIn.delegate = self;
-
-    [signIn authenticate];
+//    
+//    GPPSignIn *signIn = [GPPSignIn sharedInstance];
+//    signIn.shouldFetchGooglePlusUser = YES;
+//    signIn.shouldFetchGoogleUserEmail = YES;
+//    
+//    signIn.clientID = kClientId;
+//    signIn.scopes = @[ @"profile" ];
+//    
+//    // Optional: declare signIn.actions, see "app activities"
+//    signIn.delegate = self;
+//
+//    [signIn authenticate];
 }
 
 - (void)finishedWithAuth: (GTMOAuth2Authentication *)auth
@@ -43,14 +44,11 @@ static NSString * const kClientId = CLIEND_ID;
     }
 }
 
+
+
 - (void)presentSignInViewController:(UIViewController *)viewController {
     // This is an example of how you can implement it if your app is navigation-based.
     [[self navigationController] pushViewController:viewController animated:YES];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)scanAction:(id)sender
