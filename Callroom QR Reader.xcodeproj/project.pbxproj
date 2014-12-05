@@ -88,6 +88,64 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5EE294E01A320827009441E1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5EE294D51A31E849009441E1 /* CRRHTTPRequestOperationManager.h */,
+				5EE294D61A31E849009441E1 /* CRRHTTPRequestOperationManager.m */,
+				5EE294D81A3200D7009441E1 /* CRRAPIManager.h */,
+				5EE294D91A3200D7009441E1 /* CRRAPIManager.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		5EE294E11A320834009441E1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5EE294E41A32084B009441E1 /* Temp */,
+				5EE294E21A32083B009441E1 /* Login */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5EE294E21A32083B009441E1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5E324E231A31CA2100E7C0F7 /* CRRLoginViewController.h */,
+				5E324E241A31CA2100E7C0F7 /* CRRLoginViewController.m */,
+				5EE294E31A320842009441E1 /* View */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		5EE294E31A320842009441E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E324E261A31CA8600E7C0F7 /* CRRLoginView.h */,
+				5E324E271A31CA8600E7C0F7 /* CRRLoginView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5EE294E41A32084B009441E1 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				907A75591A2A3A4700A58967 /* CRRViewController.h */,
+				907A755A1A2A3A4700A58967 /* CRRViewController.m */,
+			);
+			name = Temp;
+			sourceTree = "<group>";
+		};
+		5EE294E51A320855009441E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				907A755C1A2A3A4700A58967 /* Main.storyboard */,
+				907A755F1A2A3A4700A58967 /* Images.xcassets */,
+				907A75611A2A3A4700A58967 /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		907A75461A2A3A4700A58967 = {
 			isa = PBXGroup;
 			children = (
@@ -115,19 +173,9 @@
 				5EE294DF1A320539009441E1 /* Defines.h */,
 				907A75561A2A3A4700A58967 /* AppDelegate.h */,
 				907A75571A2A3A4700A58967 /* AppDelegate.m */,
-				907A75591A2A3A4700A58967 /* CRRViewController.h */,
-				907A755A1A2A3A4700A58967 /* CRRViewController.m */,
-				5E324E231A31CA2100E7C0F7 /* CRRLoginViewController.h */,
-				5E324E241A31CA2100E7C0F7 /* CRRLoginViewController.m */,
-				5E324E261A31CA8600E7C0F7 /* CRRLoginView.h */,
-				5E324E271A31CA8600E7C0F7 /* CRRLoginView.m */,
-				5EE294D51A31E849009441E1 /* CRRHTTPRequestOperationManager.h */,
-				5EE294D61A31E849009441E1 /* CRRHTTPRequestOperationManager.m */,
-				5EE294D81A3200D7009441E1 /* CRRAPIManager.h */,
-				5EE294D91A3200D7009441E1 /* CRRAPIManager.m */,
-				907A755C1A2A3A4700A58967 /* Main.storyboard */,
-				907A755F1A2A3A4700A58967 /* Images.xcassets */,
-				907A75611A2A3A4700A58967 /* LaunchScreen.xib */,
+				5EE294E11A320834009441E1 /* Controllers */,
+				5EE294E01A320827009441E1 /* Networking */,
+				5EE294E51A320855009441E1 /* Resources */,
 				907A75521A2A3A4700A58967 /* Supporting Files */,
 			);
 			path = "Callroom QR Reader";
