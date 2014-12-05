@@ -38,14 +38,18 @@ static inline NSString * key() {
     }];
 }
 
-+ (void)calendarEventsWithCalendar:(CRRCalendar *)calendar success:(CRRArrayBlock)success failure:(CRRErrorBlock)failure {
++ (void)calendarEventsWithCalendar:(CRRCalendar *)calendar success:(CRRArrayStringBlock)success failure:(CRRErrorBlock)failure {
+    
+    NSString *timeMin = @"2014-12-05T00:00:00-04:00";//@"2014-12-05T00:00:00Z";
+    NSString *timeMax = @"2014-12-06T23:59:59-04:00";//@"2014-12-06T00:00:00Z";
     
     NSString *path = [NSString stringWithFormat:@"calendars/%@/events", calendar.identifier];
+    NSString *query = [NSString stringWithFormat:@"%@&&timeMin=%@&timeMax=%@&singleEvents=true", key(), timeMin, timeMax];
     
-    [CRRNetworkManager requestWithGET:key() path:path success:^(NSDictionary *response) {
+    [CRRNetworkManager requestWithGET:query path:path success:^(NSDictionary *response) {
         
         NSArray *array = [MTLJSONAdapter modelsOfClass:[CRREvent class] fromJSONArray:response[@"items"] error:NULL];
-        success(array);
+        success(array, response[@"summary"]);
         
     } failure:^(NSError *error) {
         failure(error);

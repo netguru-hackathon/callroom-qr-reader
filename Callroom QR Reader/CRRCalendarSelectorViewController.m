@@ -45,6 +45,7 @@
     _aView.tableView.dataSource = self;
     
     self.title = @"Choose source";
+    self.navigationItem.hidesBackButton = YES;
 }
 
 #pragma mark UITableViewDelegate
@@ -59,8 +60,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     CRRCalendar *calendar = self.model[indexPath.row];
-    CRREventsPresenterViewController *controller = [[CRREventsPresenterViewController alloc] initWithCalendar:calendar];
-    [self.navigationController pushViewController:controller animated:YES];
+    [self pushControllerWithCalendar:calendar];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -95,11 +95,19 @@
 
 - (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result {
     [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"%@", result);
+        CRRCalendar *calendar = [[CRRCalendar alloc] init];
+        calendar.identifier = result;
+        [self pushControllerWithCalendar:calendar];
     }];
 }
 
 - (void)readerDidCancel:(QRCodeReaderViewController *)reader {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark
+- (void)pushControllerWithCalendar:(CRRCalendar *)calendar {
+    CRREventsPresenterViewController *controller = [[CRREventsPresenterViewController alloc] initWithCalendar:calendar];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 @end

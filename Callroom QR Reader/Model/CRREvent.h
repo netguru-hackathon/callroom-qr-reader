@@ -20,9 +20,8 @@
 @property (nonatomic, strong) NSString *startDate;
 @property (nonatomic, strong) NSString *endDate;
 @property (nonatomic, strong) NSString *status;
-@property (nonatomic, strong) NSNumber *summary;
+@property (nonatomic, strong) NSString *summary;
 @property (nonatomic, strong) NSString *htmlLink;
 @property (nonatomic, strong) NSString *identifier;
-
 
 @end

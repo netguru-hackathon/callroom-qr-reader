@@ -53,7 +53,11 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Available calendars";
+    return @"05.12.2014";
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
 }
 
 #pragma mark UITableViewDataSource
@@ -65,7 +69,10 @@
     }
     
     CRREvent *event = self.model[indexPath.row];
-    cell.textLabel.text = event.info;
+    
+    cell.textLabel.text = event.startDate;
+    cell.detailTextLabel.text = event.endDate;
+    cell.nameLabel.text = event.summary ? : @"No data";
     
     return cell;
 }
@@ -75,15 +82,16 @@
     
     [_aView addLoadingView];
     _aView.tableView.hidden = YES;
-    [CRRAPIManager calendarEventsWithCalendar:self.calendar success:^(NSArray *array) {
+    [CRRAPIManager calendarEventsWithCalendar:self.calendar success:^(NSArray *array, NSString *name) {
         
+        self.title = name;
         _model = array;
         [_aView removeLoadingView];
         _aView.tableView.hidden = NO;
         [_aView.tableView reloadData];
         
     } failure:^(NSError *error) {
-        [_aView addReloadButtonWithTarget:self action:@selector(loadData)];
+        [_aView addReloadButtonWithError:error target:self action:@selector(loadData)];
     }];
     
 }

@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import <GooglePlus/GooglePlus.h>
 #import "CRRLoginViewController.h"
-#import "CRRCalendarSelectorViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +21,6 @@
     // Override point for customization after application launch.
     
     CRRLoginViewController *loginViewController = [[CRRLoginViewController alloc] init];
-    CRRCalendarSelectorViewController *selectorViewController = [[CRRCalendarSelectorViewController alloc] initWithModel:@[]];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     self.window.rootViewController = navigationController;

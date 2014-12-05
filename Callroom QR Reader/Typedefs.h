@@ -12,6 +12,7 @@
 typedef void (^CRRBooleanBlock)(BOOL success);
 typedef void (^CRRErrorBlock)(NSError *error);
 typedef void (^CRRArrayBlock)(NSArray *array);
+typedef void (^CRRArrayStringBlock)(NSArray *array, NSString *name);
 typedef void (^CRRObjectBlock)(id object);
 typedef void (^CRRObjectBlock)(id object);
 

@@ -13,6 +13,7 @@
 #import "Defines.h"
 #import "CRRAPIManager.h"
 #import "CRRCalendarSelectorViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface CRRLoginViewController () <GPPSignInDelegate>
 
@@ -43,9 +44,13 @@
     signIn.scopes = @[@"https://www.googleapis.com/auth/calendar", @"https://www.googleapis.com/auth/plus.login"];
     
     signIn.delegate = self;
+    
+    self.title = @"Callroom QR Reader";
 }
 
 - (void)finishedWithAuth:(GTMOAuth2Authentication *)auth error:(NSError *)error {
+    
+    [SVProgressHUD dismiss];
 
     [CRRAPIManager setupAPIWithToken:auth];
     [CRRAPIManager calendarListWithSuccess:^(NSArray *array) {
@@ -61,7 +66,7 @@
 
 #pragma mark UIControl Methods
 - (void)signInButtonDidClick:(GPPSignInButton *)button {
-
+    [SVProgressHUD showWithStatus:@"logging in" maskType:SVProgressHUDMaskTypeGradient];
 }
 
 @end

@@ -12,5 +12,6 @@
 @interface CRRLoginView : CRRBaseView
 
 @property (nonatomic, strong) GPPSignInButton *signInButton;
+@property (nonatomic, strong) UILabel *label;
 
 @end

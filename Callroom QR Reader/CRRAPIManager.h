@@ -15,6 +15,6 @@
 
 + (void)setupAPIWithToken:(GTMOAuth2Authentication *)token;
 + (void)calendarListWithSuccess:(CRRArrayBlock)success failure:(CRRErrorBlock)failure;
-+ (void)calendarEventsWithCalendar:(CRRCalendar *)calendar success:(CRRArrayBlock)success failure:(CRRErrorBlock)failure;
++ (void)calendarEventsWithCalendar:(CRRCalendar *)calendar success:(CRRArrayStringBlock)success failure:(CRRErrorBlock)failure;
 
 @end

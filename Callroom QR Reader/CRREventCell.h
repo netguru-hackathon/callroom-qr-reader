@@ -14,4 +14,6 @@
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 
+@property (nonatomic, strong) UILabel *nameLabel;
+
 @end

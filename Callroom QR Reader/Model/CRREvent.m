@@ -31,14 +31,21 @@
 
 + (NSValueTransformer *)endDateJSONTransformer {
     return [MTLValueTransformer transformerWithBlock:^NSString *(NSDictionary *end) {
-        return end[@"date"];
+        return [self GMTTimeWithTime:end[@"dateTime"]];
     }];
 }
 
 + (NSValueTransformer *)startDateJSONTransformer {
     return [MTLValueTransformer transformerWithBlock:^NSString *(NSDictionary *start) {
-        return start[@"date"];
+        return [self GMTTimeWithTime:start[@"dateTime"]];
     }];
+}
+
++ (NSString *)GMTTimeWithTime:(NSString *)time {
+    NSString *string = [time componentsSeparatedByString:@"T"][1];
+    string = [string componentsSeparatedByString:@"-"][0];
+    NSString *hour = [NSString stringWithFormat:@"%02d", [[string substringToIndex:2] integerValue] + 9];
+    return [string stringByReplacingCharactersInRange:NSMakeRange(0, 2) withString:hour];
 }
 
 @end
