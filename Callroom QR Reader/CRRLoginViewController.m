@@ -37,7 +37,8 @@ static NSString * const kClientId = @"481541711545-31kbrp5pknl0p4ggiof53ocibmg01
     signIn.shouldFetchGoogleUserEmail = YES;
     
     signIn.clientID = kClientId;
-    signIn.scopes = @[@"profile", @"calendar"];
+    signIn.scopes = @[@"profile"];
+//    signIn.scopes = @[@"https://www.googleapis.com/auth/calendar", @"https://www.googleapis.com/auth/plus.login"];
     
     signIn.delegate = self;
 }

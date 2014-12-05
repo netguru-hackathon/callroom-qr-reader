@@ -7,6 +7,7 @@
 //
 
 #import "CRRLoginView.h"
+#import <GooglePlus/GooglePlus.h>
 
 @implementation CRRLoginView
 

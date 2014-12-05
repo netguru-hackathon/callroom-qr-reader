@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <GooglePlus/GooglePlus.h>
+@class GPPSignInButton;
 
 @interface CRRLoginView : UIView
 
