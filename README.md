@@ -1,6 +1,8 @@
 Callroom QR reader
 ==================
 
+[![Join the chat at https://gitter.im/netguru-hackathon/callroom-qr-reader](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/netguru-hackathon/callroom-qr-reader?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ###Description
 
 Callroom QR reader gives a possibility to check callrooms availability in next 24 hours. There are 2 ways to achieve this
